@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Zena Hijab</title>
 
-    <!-- Font Awesome untuk ikon -->
+    <!-- Font Awesome untuk ikon sosial media -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <!-- Lucide untuk ikon tambahan jika dibutuhkan -->
+    <!-- Lucide (opsional) -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-    <!-- Gaya CSS -->
+    <!-- Style -->
     <style>
+      :root {
+        --primary: #b76e79;
+        --secondary: #a56c6c;
+        --accent: #c68686;
+        --light-bg: #ffe8e8;
+        --soft-bg: #e6b8b7;
+        --border: #dfadad;
+        --text: #866666;
+        --dark: #300606;
+      }
+
       body {
         margin: 0;
         padding: 0;
-        background: linear-gradient(to bottom right, #fff4fb, #f3eaff);
+        background: linear-gradient(to bottom right, var(--light-bg), var(--soft-bg));
         font-family: 'Segoe UI', sans-serif;
-        color: #5a3d85;
+        color: var(--text);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,11 +43,11 @@
         background: white;
         padding: 40px 30px;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(194, 151, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
         width: 100%;
         max-width: 500px;
         text-align: center;
-        position: relative;
+        border: 2px solid var(--border);
       }
 
       .photo-frame {
@@ -46,8 +57,8 @@
         margin: 0 auto 20px;
         border-radius: 50%;
         padding: 5px;
-        background: linear-gradient(135deg, #d9b8f8, #fdd9f9);
-        box-shadow: 0 4px 12px rgba(178, 120, 219, 0.3);
+        background: linear-gradient(135deg, var(--accent), var(--soft-bg));
+        box-shadow: 0 4px 12px rgba(178, 120, 219, 0.2);
       }
 
       .photo-frame img {
@@ -61,12 +72,12 @@
       h1 {
         font-size: 28px;
         margin-bottom: 10px;
-        color: #8b45a6;
+        color: var(--primary);
       }
 
       .subtitle {
         font-size: 14px;
-        color: #a78bcd;
+        color: var(--secondary);
         margin-bottom: 30px;
       }
 
@@ -85,28 +96,28 @@
       }
 
       .contact-item i {
-        color: #b97de6;
+        color: var(--accent);
         width: 20px;
         height: 20px;
       }
 
       .contact-item a {
-        color: #6d3792;
+        color: var(--dark);
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s ease;
       }
 
       .contact-item a:hover {
-        color: #9a59c5;
+        color: var(--primary);
       }
     </style>
   </head>
   <body>
     <div class="contact-container">
-      <!-- Foto Profil dengan Frame -->
+      <!-- Foto Profil -->
       <div class="photo-frame">
-        <img src="https://via.placeholder.com/150" alt="Zena Hijab" />
+        <img src="foto1/150" alt="Zena Hijab" />
       </div>
 
       <h1>Zena Hijab</h1>
@@ -133,7 +144,7 @@
     </div>
 
     <script>
-      lucide.createIcons();
+      lucide.createIcons(); // kalau pakai Lucide
     </script>
   </body>
 </html>
